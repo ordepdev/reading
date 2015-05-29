@@ -3,3 +3,13 @@
 At the beginning of an iteration, you'll find yourself having to choose between "doing it right" and "doing it quick". It is often appealing to "do it quick" with the understanding that you'll come back and fix it later.
 
 The next iteration brings new problems and you become focused on them. This sort of deferred work is known as technical debt. The longer you leave it, the worse it gets.
+
+# Automate Your Coding Standard
+
+During the kick-off meeting, the lead developer goes through the document and everybody agrees that they will try to follow them. Once the project gets underway these good intentions are abandoned, one at a time. When the project is finally delivered, the code looks like a mess.
+
+Well-formatted code doesn't earn you points with a customer that wants more functionality.
+
+One reason to format the code in a uniform way is so that nobody can "own" a piece of code just by formatting it in his or her private way.
+
+Automate your coding standard.
