@@ -13,3 +13,15 @@ Well-formatted code doesn't earn you points with a customer that wants more func
 One reason to format the code in a uniform way is so that nobody can "own" a piece of code just by formatting it in his or her private way.
 
 Automate your coding standard.
+
+# Before you refactor
+
+Avoid the temptation to rewrite everything. Throwing away old production code means that you are throwing away months of tested, reviewed code.
+
+Prefer incremental changes to massive changes. It is no fun to see a hundred test failures after you make a change.
+
+Add new tests if the existing tests are not sufficient to cover the changes you made.
+
+If something isn't broken, why fix it?
+
+Do not refactor based on new tech.
