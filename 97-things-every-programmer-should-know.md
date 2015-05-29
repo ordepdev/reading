@@ -25,3 +25,11 @@ Add new tests if the existing tests are not sufficient to cover the changes you 
 If something isn't broken, why fix it?
 
 Do not refactor based on new tech.
+
+# Code in the Language of the Domain
+
+If you don't code using domain terms you are creating a secret. The next programmer to come along might not be in on the secret, so why not make it explicit?
+
+Making domain concepts explicit in your code means other programmers can gather the intent of the code much more easily than by trying to retrofit an algorithm into what they understand about a domain.
+
+The programmer who comes along a few months later to work on the code will thank you. The programmer who comes along a few months later might be you.
