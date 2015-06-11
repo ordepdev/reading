@@ -33,3 +33,17 @@ If you don't code using domain terms you are creating a secret. The next program
 Making domain concepts explicit in your code means other programmers can gather the intent of the code much more easily than by trying to retrofit an algorithm into what they understand about a domain.
 
 The programmer who comes along a few months later to work on the code will thank you. The programmer who comes along a few months later might be you.
+
+# Code Reviews
+
+When had bad experiences with code reviews, many programmers tend to dislike them.
+
+Prodution code must be reviwed, either manual or automized.
+
+Instead of simply correcting mistakes in code, the purpose of code reviews should be to share knowledge and establish common coding guidelines.
+
+Involve newbies in code reviews. They may be inexperienced, but their fresh university knowlege can provide a different perspective.
+
+Experts must share their experience and knowlege.
+
+Make the code review fun.
