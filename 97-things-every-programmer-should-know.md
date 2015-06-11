@@ -47,3 +47,13 @@ Involve newbies in code reviews. They may be inexperienced, but their fresh univ
 Experts must share their experience and knowlege.
 
 Make the code review fun.
+
+# Continuous Learning
+
+You need to keep learning to stay marketable. Otherwise you'll become a dinosaur.
+
+Some employers are generous enough to provide training to broaden your skill set. To play it safe, you need to take responsibility for your own education.
+
+You don't have to spend every waking hour learning. A litte time is better than nothing. There is a life outside of work.
+
+Technology changes fast. Don't get left behing.
