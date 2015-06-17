@@ -69,3 +69,13 @@ Starting your project with a deployment process will give you time to evolve the
 The simple truth is that until you can demonstrate your application on the target environment, there is a lot of work to do before you can deliver business value.
 
 We test and refactor the source code throughout a project. The deployment deserves no less.
+
+# Do lots of Deliberate Practice
+
+You do deliberate practice to improve your ability to perform a task.
+
+The principal aim of paid development is to finish a product, whereas the principal aim of deliberate practice is to improve your performance.
+
+Not just doing it again and again, but challenging yourself with a task that is just beyond your current ability.
+
+Deliberate practice is about learning - learning that changes you, learning that changes your behavior.
