@@ -38,13 +38,13 @@ The programmer who comes along a few months later to work on the code will thank
 
 When had bad experiences with code reviews, many programmers tend to dislike them.
 
-Prodution code must be reviwed, either manual or automized.
+Production code must be reviewed, either manual or automatized.
 
 Instead of simply correcting mistakes in code, the purpose of code reviews should be to share knowledge and establish common coding guidelines.
 
-Involve newbies in code reviews. They may be inexperienced, but their fresh university knowlege can provide a different perspective.
+Involve newbies in code reviews. They may be inexperienced, but their fresh university knowledge can provide a different perspective.
 
-Experts must share their experience and knowlege.
+Experts must share their experience and knowledge.
 
 Make the code review fun.
 
@@ -54,6 +54,18 @@ You need to keep learning to stay marketable. Otherwise you'll become a dinosaur
 
 Some employers are generous enough to provide training to broaden your skill set. To play it safe, you need to take responsibility for your own education.
 
-You don't have to spend every waking hour learning. A litte time is better than nothing. There is a life outside of work.
+You don't have to spend every waking hour learning. A little time is better than nothing. There is a life outside of work.
 
-Technology changes fast. Don't get left behing.
+Technology changes fast. Don't get left behind.
+
+# Deploy early and often
+
+The deployment process is the first thing that customer sees.
+
+By not ensuring that the deployment sets up the application correctly, you'll raise questions with your customers before they get to use your software.
+
+Starting your project with a deployment process will give you time to evolve the process as you move through the development cycle.
+
+The simple truth is that until you can demonstrate your application on the target environment, there is a lot of work to do before you can deliver business value.
+
+We test and refactor the source code throughout a project. The deployment deserves no less.
