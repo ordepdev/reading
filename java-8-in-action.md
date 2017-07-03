@@ -28,3 +28,17 @@
 * Operations like filter and map are stateless; they don't store any state. Others like reduce are stateful; they store state in order to calculate the result;
 * An infinite stream is a stream that has no fixed size; they are created using iterate and generate methods.
 
+# Parallel data processing and performance
+
+* Some stream operations are more parallelizable than others.
+* The iterate operation is hard to split into chunks that can be executed independently because the input of one function application always depends on the result of the previous application.
+* Parallel programming can be tricky and sometimes counterintuitive. When misused it can actually worsen the overall performance of our programs.
+* Numeric stream avoids all the overhead caused by all the unnecessary autoboxing and unboxing operations performed by the nonspecialized stream.
+* The paralelization process itself requires to recursively partition the stream, assign the reduction operation of each substream to a different thread, and then combine the results of these operations in a single value.
+* Turning a sequential stream into a parallel one is trivial but not always the right thing to do.
+* A parallel stream isn’t always faster than the corresponding sequential version.
+* Automatic boxing and unboxing operations can dramatically hurt performance.
+* Operations such as limit and findFirst that rely on the order of the elements are expensive in a parallel stream.
+* findAny will perform better than findFirst because it isn’t constrained to operate in the encounter order.
+* For a small amount of data, choosing a parallel stream is almost never a winning decision.
+
