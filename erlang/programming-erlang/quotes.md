@@ -138,3 +138,116 @@ to call ourselves; we’re not going to run out of stack space. Erlang applies a
 socalled tail-call optimization to the code, which means that this function will
 run in constant space. This is the standard way of writing a loop in Erlang.
 Just call yourself as the last thing you do.
+
+# Variables
+
+> Erlang has single-assignment variables. As the name suggests, they can be
+given a value only once. If you try to change the value of a variable once it
+has been set, then you’ll get an error (in fact, you’ll get the badmatch error
+we just saw). A variable that has had a value assigned to it is called a bound
+variable; otherwise, it is called an unbound variable.
+
+> The scope of a variable is the lexical unit in which it is defined. So, if X
+is used inside a single function clause, its value does not “escape” to outside
+the clause. There are no such things as global or private variables shared by
+different clauses in the same function. If X occurs in many different functions,
+then all the values of X are unrelated.
+
+> In Erlang, = is a pattern matching operation. Lhs = Rhs really means this:
+evaluate the right side (Rhs), and then match the result against the pattern on
+the left side (Lhs).
+
+> In Erlang, there is no mutable state, there is no shared memory, and there
+are no locks. This makes it easy to parallelize our programs.
+
+> If you use a conventional programming language such as C or Java to program
+a multicore CPU, then you will have to contend with the problem of shared
+memory. In order not to corrupt shared memory, the memory has to be locked
+while it is accessed. Programs that access shared memory must not crash while
+they are manipulating the shared memory.
+
+> Using immutable variables simplifies debugging. To understand why this is
+true, we must ask ourselves what an error is and how an error makes itself
+known.
+
+# Floating-Point Numbers
+
+> In Erlang when you divide two integers with /, the result is automatically
+converted to a floating-point number.
+
+```erl
+1> 5/3.
+1.6666666666666667
+
+2> 4/2.
+2.0
+
+3> 5 div 3.
+1
+
+4> 5 rem 3.
+2
+
+5> 4 div 2.
+2
+```
+# Tuples
+
+> To make it easier to remember what a tuple is being used for, it’s common to
+use an atom as the first element of the tuple, which describes what the tuple
+represents. So, we’d write {point, 10, 45} instead of {10, 45}, which makes
+the program a lot more understandable.
+
+> If we want to extract some values from a tuple, we use the pattern
+matching operator =.
+
+```erl
+1> Point = {point, 10, 45}.
+{point, 10, 45}.
+
+2> {_, X, Y} = Point.
+{point,10,45}
+
+3> X.
+10
+
+4> Y.
+45
+
+5> Person={person,{name,joe,armstrong},{footsize,42}}.
+{person,{name,joe,armstrong},{footsize,42}}
+
+6> {_,{_,Who,_},_} = Person.
+{person,{name,joe,armstrong},{footsize,42}}
+
+7> Who.
+joe
+```
+
+> The symbol _ is called an anonymous variable. Unlike regular variables,
+several occurrences of _ in the same pattern don’t have to bind to the same
+value.
+
+# Lists
+
+> We call the first element of a list the head of the list. If you imagine
+removing the head from the list, what’s left is called the tail of the list.
+
+> As with everything else, we can extract elements from a list with a pattern
+matching operation. If we have the nonempty list L, then the expression
+[X|Y] = L, where X and Y are unbound variables, will extract the head of the
+list into X and the tail of the list into Y.
+
+```erl
+1> List = [1,2,3,4,5].
+[1,2,3,4,5]
+
+2> [Head|Tail] = List.
+[1,2,3,4,5]
+
+3> Head.
+1
+
+4> Tail.
+[2,3,4,5]
+```
