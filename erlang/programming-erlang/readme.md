@@ -251,3 +251,33 @@ list into X and the tail of the list into Y.
 4> Tail.
 [2,3,4,5]
 ```
+
+# Modules and Functions
+
+> Modules and functions are the basic units from which sequential and parallel
+programs are built. Modules contain functions, and the functions can be run
+sequentially or in parallel.
+
+> Modules are the basic units of code in Erlang. Modules are contained in files
+with .erl extensions and must be compiled before the code in the modules can be
+run. Compiled modules have the extension .beam.
+
+> We can easily add tests and perform test-driven development without any
+additional tools. All we need is pattern matching and =.
+
+-module(geometry).
+-export([test/0, area/1]).
+
+```erl
+test() ->
+    12  = area({rectangle, 3, 4}),
+    144 = area({square, 12}),
+    ok.
+
+area({rectangle, Width, Height}) -> Width * Height;
+area({square, Side})             -> Side * Side.
+```
+
+> In the Erlang equivalent, we merely write the patterns, and the Erlang
+compiler generates optimal pattern matching code, which selects the correct
+entry point for the program.
